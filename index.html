@@ -39,9 +39,9 @@
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a href="" data-toggle="modal" data-target="#loginmodal">
+                    <button class="btn btn-success" id="button-login">
                         <i class="fa fa-sign-in"></i> Login
-                    </a>
+                    </button>
                 </span>
             </div>
         </div>
@@ -129,7 +129,7 @@
                             <label class="col-12 col-sm-3 col-form-label" for="zone">Section</label>
                             <div class="col-12 col-sm-9" id="zone">
                                 <label class="radio-inline" name="opt">
-                                    <input type="button" class="btn btn-success" value="Non Smoking" checked>
+                                    <input type="button" class="btn btn-success" value="Non Smoking">
                                 </label>
                                 <label class="radio-inline" name="opt">
                                     <input type="button" class="btn btn-danger" value="Smoking">
@@ -147,9 +147,10 @@
                             </div>
 
                         </div>
-                        <div class="col-12 form-group row">
-                            <button class="col-6 offset-sm-3 col-sm-3 btn btn-primary" type="button">Reserve</button>
-                        </div>
+                        <div class="form-group row">
+                            <button class="col-3 col-sm-2 offset-sm-3 btn btn-danger" type="button">Cancel</button>  
+                            <button class="col-3 col-sm-2 btn btn-primary" type="button">Reserve</button>   
+                        </div>  
                     </form>
                 </div>
             </div>
@@ -169,8 +170,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="col-12 btn btn-warning align-self-center" href="" data-toggle="modal"
-                        data-target="#reservemodal">Reserve Table</a>
+                    <button class="col-12 btn btn-warning align-self-center" id="button-reserve">Reserve Table</button>
                 </div>
 
             </div>
@@ -425,6 +425,14 @@
                     $("#carouselButton").children('span').removeClass('fa-play');
                     $("#carouselButton").children('span').addClass('fa-pause');
                 }
+            })
+            // Launching Login modal
+            $("#button-login").click(function(){ 
+                $("#loginmodal").modal('show');
+            })
+            //Launching Reserve modal
+            $("#button-reserve").click(function(){
+                $("#reservemodal").modal('show');
             })
         });
     </script>

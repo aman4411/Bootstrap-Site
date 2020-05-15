@@ -1,0 +1,18 @@
+$modal-header-color : #4e2f9d;
+$modal-body-color : #d1c4e6;
+$modal-text-color : #ffff;
+
+.modal {
+   .modal-header{
+       background-color: $modal-header-color;
+       button{
+           color: floralwhite;
+       }
+       h4{
+           color: $modal-text-color;
+       }
+   }
+   .modal-body{
+       background-color: $modal-body-color;
+   }
+}
